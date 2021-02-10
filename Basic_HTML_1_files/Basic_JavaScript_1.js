@@ -1,6 +1,4 @@
-function my_alert() {
-    alert("Hello world! I am an alert box!");
-}
+alert("Hello world! I am an alert box!");
 
 function My_FirstFunction() {
     var String = "Kiss me, I'm Irish!";
