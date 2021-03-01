@@ -474,7 +474,7 @@ section {
             LIGHTBOX
 ========================================================================*/
 .row > .column {
-    padding: 0 8px;
+    padding: 50px;
   }
   
   .row:after {
@@ -516,7 +516,7 @@ section {
   .closeLight {
     color: white;
     position: absolute;
-    top: 10px;
+    top: 50px;
     right: 25px;
     font-size: 35px;
     font-weight: bold;
@@ -576,7 +576,9 @@ section {
   }
   
   img {
-    margin-bottom: -4px;
+    margin-bottom: 4px;
+    width: 300px;
+    height: 169px;
   }
   
   .caption-container {
