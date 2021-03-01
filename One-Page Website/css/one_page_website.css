@@ -513,7 +513,7 @@ section {
   }
   
   /* The Close Button */
-  .close {
+  .closeLight {
     color: white;
     position: absolute;
     top: 10px;
@@ -522,7 +522,7 @@ section {
     font-weight: bold;
   }
   
-  .close:hover{
+  .closeLight:hover {
     color: #999;
     text-decoration: none;
     cursor: pointer;
