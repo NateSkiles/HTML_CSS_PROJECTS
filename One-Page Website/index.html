@@ -8,6 +8,7 @@
         <script src="JS/one_page_website.js" defer></script>
     </head>
     <body>
+        <script>document.body.classList.add('fade-out');</script>
 
         <!--NAV-->
         <div class="navbar">
@@ -18,11 +19,28 @@
                         <li><a href="#gallery">GALLERY</a></li>
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
+                
+        <!--END NAV-->
+        
+                    <!-- LOGIN -->
+                    <button class="open-button" onclick="openForm()">Log In</button>
+                    <div class="form-popup" id="myForm">
+                        <form class="form-container"?>
+                            <h1>Login</h1>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                            <label for="psw"><b>Enter Password</b></label>
+                            <input type="text" placeholder="Enter Email" name="psw" required>
+
+                            <button type="submit" class="btn">Login</button>
+                            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--END NAV-->
-        
         <!--HOME-->
             <div id="home">
                 <div class="container">
@@ -255,11 +273,11 @@
                             Please provide us with your basic contact information.
                         </p>
                         <div class="form-rsvp">
-                            <form action="" method="post">
-                                <input class="rsvp" type="text" value="First Name">
-                                <input class="rsvp" type="text" value="Last Name">
-                                <input class="rsvp" type="text" value="Email Address">
-                                <input class="rsvp" type="text" value="Phone Number">
+                            <form name="contactForm" action="" method="post" onsubmit="return validateForm()">
+                                <input class="rsvp" type="text" name="contact" onfocus="this.value=''" value="First Name">
+                                <input class="rsvp" type="text" name="contact" onfocus="this.value=''" value="Last Name">
+                                <input class="rsvp" type="text" name="contact" onfocus="this.value=''" value="Email Address">
+                                <input class="rsvp" type="text" name="contact" onfocus="this.value=''" value="Phone Number">
                                 <div class="form-spacer">
                                     <label class="terms">Terms and Conditions</label>
                                 </div>
