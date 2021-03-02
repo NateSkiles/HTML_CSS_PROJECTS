@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>The Modded Corner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/one_page_website.css">
+        <script src="JS/one_page_website.js" defer></script>
     </head>
     <body>
 
@@ -32,13 +34,96 @@
         <!--END HOME-->
         
         <!--GALLERY-->
+        <div class="lightbox">
+
+            <div id="myModal" class="modal">
+                <span class="closeLight" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                    <div class="numbertext">1 / 9</div>
+                    <img src="images/Thumb/thumbnail_1.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">2 / 9</div>
+                    <img src="images/Thumb/thumbnail_2.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">3 / 9</div>
+                    <img src="images/Thumb/thumbnail_3.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">4 / 9</div>
+                    <img src="images/Thumb/thumbnail_4.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">5 / 9</div>
+                    <img src="images/Thumb/thumbnail_5.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">6 / 9</div>
+                    <img src="images/Thumb/thumbnail_6.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">7 / 9</div>
+                    <img src="images/Thumb/thumbnail_7.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">8 / 9</div>
+                    <img src="images/Thumb/thumbnail_8.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                    <div class="numbertext">9 / 9</div>
+                    <img src="images/Thumb/thumbnail_9.png" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+
+
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_1.png" style="width:100%" onclick="currentSlide(1)" alt="Wooden asian inspired pc.">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_2.png" style="width:100%" onclick="currentSlide(2)" alt="Updated e-machine.">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_3.png" style="width:100%" onclick="currentSlide(3)" alt="Cube PC">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_4.png" style="width:100%" onclick="currentSlide(4)" alt="Its your pc in a box!">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_5.png" style="width:100%" onclick="currentSlide(5)" alt="Modded mac.">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_6.png" style="width:100%" onclick="currentSlide(6)" alt="Cyber-Punk themed pc.">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_7.png" style="width:100%" onclick="currentSlide(7)" alt="Bernie sitting on a video card.">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_8.png" style="width:100%" onclick="currentSlide(8)" alt="A cat in a pc!">
+                    </div>
+                    <div class="column">
+                    <img class="demo cursor" src="images/Thumb/thumbnail_9.png" style="width:100%" onclick="currentSlide(9)" alt="Modded front panel.">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <section id="gallery">
             <div id="container">
                 <h1>Gallery</h1>
                 <div class="flex-container">
 
                     <!--PHOTO CONTAINER 1-->
-                    <div class="photo-container">
+                    <div class="photo-container" onclick="openModal();currentSlide(1)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_1.png" alt="Wooden asian inspired pc.">
                             <div class="photo-overlay">
@@ -50,7 +135,7 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 2-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(2)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_2.png" alt="Updated e-machine.">
                             <div class="photo-overlay">
@@ -62,9 +147,9 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 3-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(3)">
                         <div class="photo">
-                            <img src="images/Thumb/thumbnail_3.png" alt="Its your pc in a box!">
+                            <img src="images/Thumb/thumbnail_3.png" alt="Cube PC!">
                             <div class="photo-overlay">
                                 <h3>Click to Enlarge</h3>
                                 <p>We have skilled veteran technicians standing by to help you build your dream pc!</p>
@@ -74,9 +159,9 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 4-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(4)">
                         <div class="photo">
-                            <img src="images/Thumb/thumbnail_4.png" alt="Modded mac.">
+                            <img src="images/Thumb/thumbnail_4.png" alt="Its your pc in a box!">
                             <div class="photo-overlay">
                                 <h3>Click to Enlarge</h3>
                                 <p>We have skilled veteran technicians standing by to help you build your dream pc!</p>
@@ -86,9 +171,9 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 5-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(5)">
                         <div class="photo">
-                            <img src="images/Thumb/thumbnail_5.png" alt="Cyber punk themed pc.">
+                            <img src="images/Thumb/thumbnail_5.png" alt="Modded mac.">
                             <div class="photo-overlay">
                                 <h3>Click to Enlarge</h3>
                                 <p>We have skilled veteran technicians standing by to help you build your dream pc!</p>
@@ -98,7 +183,7 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 6-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(6)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_6.png" alt="Cyber-Punk themed pc.">
                             <div class="photo-overlay">
@@ -110,7 +195,7 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 7-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(7)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_7.png" alt="Bernie sitting on a video card.">
                             <div class="photo-overlay">
@@ -122,7 +207,7 @@
                     <!--END PHOTO CONTAINER-->
 
                      <!--PHOTO CONTAINER 8-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(8)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_8.png" alt="A cat in a pc!">
                             <div class="photo-overlay">
@@ -134,7 +219,7 @@
                     <!--END PHOTO CONTAINER -->
 
                      <!--PHOTO CONTAINER 9-->
-                     <div class="photo-container">
+                     <div class="photo-container" onclick="openModal();currentSlide(9)">
                         <div class="photo">
                             <img src="images/Thumb/thumbnail_9.png" alt="Modded front panel.">
                             <div class="photo-overlay">
